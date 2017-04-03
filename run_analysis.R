@@ -68,7 +68,7 @@ mergedTable <- bind_rows(trainFile, testFile)
 # and each subject (Requirement 5)
 mergedTable <- group_by(mergedTable, subject, activity)
 newDataSet <- summarize_all(mergedTable, mean)
-names(newDataSet)[-c(1,2)] <- paste0("Mean", names(newDataSet)[-c(1,2)])
+names(newDataSet)[-c(1,2)] <- paste0("mean.", names(newDataSet)[-c(1,2)])
 
 # Write the new tidy dataset out to a file (Requirement 5)
 write.table(newDataSet, "averagedata.txt")
