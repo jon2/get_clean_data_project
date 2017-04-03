@@ -71,4 +71,4 @@ newDataSet <- summarize_all(mergedTable, mean)
 names(newDataSet)[-c(1,2)] <- paste0("mean.", names(newDataSet)[-c(1,2)])
 
 # Write the new tidy dataset out to a file (Requirement 5)
-write.table(newDataSet, "averagedata.txt")
+write.table(newDataSet, "averagedata.txt", row.name=FALSE)
