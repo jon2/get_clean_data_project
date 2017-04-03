@@ -13,6 +13,9 @@ library(dplyr)
 ## 5.	From the data set in step 4, creates a second, independent tidy data 
 ##      set with the average of each variable for each activity and each subject.
 
+## There's a lot of opportunity here to create more readable code and do
+## this more efficiently.  But....
+
 # Read in all needed data
 trainFile <- read.table("./train/X_train.txt")
 trainActivityFile <- read.table("./train/y_train.txt")
@@ -61,5 +64,10 @@ testFile <- bind_cols(testSubjectFile, testActivityFile, testFile)
 # Note: Can't use bind_rows because there are duplicate column names
 mergedTable <- bind_rows(trainFile, testFile)
 
+# Create a new table with the average of each variable for each activity 
+# and each subject (Requirement 5)
+mergedTable <- group_by(mergedTable, subject, activity)
+newDataSet <- summarize_all(mergedTable, mean)
+
 # Write the new tidy dataset out to a file (Requirement 5)
-write.table(mergedTable, "tidyDataSet")
+write.table(newDataSet, "averagedata.txt")
