@@ -1,5 +1,5 @@
 # run_analysis.R
-This script takes as input the dataset found at [link] (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) and outputs a tidy dataset containing a subset of features for each of the measurements in the original dataset.  Specifically, it:
+This script takes as input the dataset found at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones and outputs a tidy dataset containing a subset of features for each of the measurements in the original dataset.  Specifically, it:
 
 1. Merges the training and the test sets to create one data set. The script includes the training data first, followed by the test data.
 2. Extracts only the measurements on the mean and standard deviation for each measurement. We only extract features that include "std()" or "mean()" in the feature name, as described in the features.txt file in the original dataset. We do not include features such as "fBodyBodyGyroJerkMag-meanFreq()".
@@ -10,5 +10,5 @@ This script takes as input the dataset found at [link] (http://archive.ics.uci.e
 The script should be run from within the UCI HAR Dataset folder (i.e. in the same directory where "features_info.txt" and "activity_labels.txt" live.)
 
 The script will save an output file called "averagedata.txt" which contains the independent dataset created in requirement 5.  To read this dataset back into R, use:
-  read.table("averagedata.txt", header=TRUE)
+    read.table("averagedata.txt", header=TRUE)
 This table should contain 180 rows (30 subjects * 6 activities)
