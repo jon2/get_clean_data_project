@@ -10,5 +10,7 @@ This script takes as input the dataset found at http://archive.ics.uci.edu/ml/da
 The script should be run from within the UCI HAR Dataset folder (i.e. in the same directory where "features_info.txt" and "activity_labels.txt" live.)
 
 The script will save an output file called "averagedata.txt" which contains the independent dataset created in requirement 5.  To read this dataset back into R, use:
+```R
     read.table("averagedata.txt", header=TRUE)
+```    
 This table should contain 180 rows (30 subjects * 6 activities)
