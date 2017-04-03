@@ -5,12 +5,12 @@ The first column is the subject number.  This identifies the unique subject(pers
 
 ## activity
 The second column is the activity name. Values:
--WALKING
--WALKING_UPSTAIRS
--WALKING_DOWNSTAIRS
--SITTING
--STANDING
--LAYING
+- WALKING
+- WALKING_UPSTAIRS
+- WALKING_DOWNSTAIRS
+- SITTING
+- STANDING
+- LAYING
 
 ## Average Values
 The remaining columns contain the average of all measurements for a given subject/activity combination.  Measurements in the original dataset were normalized and between -1 and +1, so the averages are also between -1 and +1.
